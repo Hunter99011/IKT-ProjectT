@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import namespace="http://tempuri.org/" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.datacontract.org/2004/07/Server" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_CarListDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:CarListDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarListDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CarListDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarPostDB_InputMessage">
+    <wsdl:part name="parameters" element="tns:CarPostDB" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarPostDB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CarPostDBResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarGet_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarGet" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarGet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarGetResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarGetCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarGetCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarGetCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarGetCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPost_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPost" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPost_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPostResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPostCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPostCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPostCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPostCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarList_InputMessage">
+    <wsdl:part name="parameters" element="tns:CarList" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CarListResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarListCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:CarListCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CarListCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CarListCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarAddCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarAddCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarAddCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarAddCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarAdd_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarAdd" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarAdd_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarAddResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPutCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPutCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPutCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPutCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPut_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPut" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPut_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPutResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPatchCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPatchCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPatchCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPatchCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPatch_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPatch" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarPatch_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarPatchResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDeleteCS_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDeleteCS" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDeleteCS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDeleteCSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDelete_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDelete" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDelete_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDeleteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDeleteID_InputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDeleteID" />
+  </wsdl:message>
+  <wsdl:message name="IService1_OneCarDeleteID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:OneCarDeleteIDResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="CarListDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CarListDB" message="tns:IService1_CarListDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CarListDBResponse" message="tns:IService1_CarListDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CarPostDB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CarPostDB" message="tns:IService1_CarPostDB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CarPostDBResponse" message="tns:IService1_CarPostDB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarGet">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarGet" message="tns:IService1_OneCarGet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarGetResponse" message="tns:IService1_OneCarGet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarGetCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarGetCS" message="tns:IService1_OneCarGetCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarGetCSResponse" message="tns:IService1_OneCarGetCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPost">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPost" message="tns:IService1_OneCarPost_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPostResponse" message="tns:IService1_OneCarPost_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPostCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPostCS" message="tns:IService1_OneCarPostCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPostCSResponse" message="tns:IService1_OneCarPostCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CarList">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CarList" message="tns:IService1_CarList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CarListResponse" message="tns:IService1_CarList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CarListCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CarListCS" message="tns:IService1_CarListCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CarListCSResponse" message="tns:IService1_CarListCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarAddCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarAddCS" message="tns:IService1_OneCarAddCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarAddCSResponse" message="tns:IService1_OneCarAddCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarAdd">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarAdd" message="tns:IService1_OneCarAdd_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarAddResponse" message="tns:IService1_OneCarAdd_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPutCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPutCS" message="tns:IService1_OneCarPutCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPutCSResponse" message="tns:IService1_OneCarPutCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPut">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPut" message="tns:IService1_OneCarPut_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPutResponse" message="tns:IService1_OneCarPut_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPatchCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPatchCS" message="tns:IService1_OneCarPatchCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPatchCSResponse" message="tns:IService1_OneCarPatchCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPatch">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarPatch" message="tns:IService1_OneCarPatch_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarPatchResponse" message="tns:IService1_OneCarPatch_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDeleteCS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarDeleteCS" message="tns:IService1_OneCarDeleteCS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarDeleteCSResponse" message="tns:IService1_OneCarDeleteCS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDelete">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarDelete" message="tns:IService1_OneCarDelete_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarDeleteResponse" message="tns:IService1_OneCarDelete_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDeleteID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/OneCarDeleteID" message="tns:IService1_OneCarDeleteID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/OneCarDeleteIDResponse" message="tns:IService1_OneCarDeleteID_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CarListDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/CarListDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarPostDB">
+      <soap:operation soapAction="http://tempuri.org/IService1/CarPostDB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarGet">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarGet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarGetCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarGetCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPost">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPost" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPostCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPostCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarList">
+      <soap:operation soapAction="http://tempuri.org/IService1/CarList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CarListCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/CarListCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarAddCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarAddCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarAdd">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarAdd" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPutCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPutCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPut">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPut" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPatchCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPatchCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarPatch">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarPatch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDeleteCS">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarDeleteCS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDelete">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarDelete" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="OneCarDeleteID">
+      <soap:operation soapAction="http://tempuri.org/IService1/OneCarDeleteID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://localhost:3000/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

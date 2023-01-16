@@ -1,0 +1,100 @@
+body {
+  background-image: url(../carback.png);
+  background-position: 500px -50px;
+  margin: 0 0 0 0;
+  overflow: hidden;
+}
+
+.delete-btn {
+  background-color: rgb(114, 29, 29);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.update-btn {
+  background-color: rgb(22, 99, 48);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-btn {
+  background-color: rgb(150, 118, 29);
+  color: white;
+  padding: 5px 10px;
+  width: 63px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.panel {
+  background-color: #181e22e6;
+  display: grid;
+  width: 50%;
+  height: 1000px;
+  border-radius: 0px 20px 20px 0px;
+  color: white;
+  justify-content: center;
+}
+
+input {
+  background-color: #181e22;
+  color: white
+}
+
+.panel h1, h3, h4 {
+  text-align: center;
+}
+
+.panel h3 {
+  margin-top: 0px;
+}
+
+.next-page, .prev-page, .page {
+  margin-left: 6%;
+  height: 100%;
+  float: left;
+}
+
+.buttons {
+  width: 160px;
+  float: right;
+}
+
+.prev-page, .next-page {
+  margin-top: 3px;
+  width: 20%;
+}
+
+.page {
+  margin: 0px 0px 0px 9px;
+}
+
+.adminpanel {
+  width: 100%;
+}
+
+table {
+  border: 1px solid rgba(90, 20, 20, 0.664);
+  padding: 10px;
+}
+
+.searchbar {
+  float: right;
+  width: 400px;
+  margin-top: 5px;
+}
+
+.searchButton, .searchinput {
+  float: right;
+}
+
+.searchButton {
+  margin-left: 10px;
+}
